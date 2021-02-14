@@ -1,0 +1,403 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+:root {
+    scroll-behavior: smooth;
+}
+
+
+@media(max-width: 800px){
+
+body{
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.cajaGrid{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr .25fr;
+    row-gap: 1rem;
+}
+
+nav{
+    display: none
+}
+
+header{
+    grid-row: 1/2;
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    margin: 1rem 1rem 0 1rem;
+}
+
+.brand{
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: .5rem 1rem;
+}
+.brand p{
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.muestra-products{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row: 2/3;
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    margin: 0 1rem;
+    padding: .5rem 1rem;
+}
+.muestra-products a{
+    font-size: 1.5rem;
+}
+.muestra-products img{
+    width: 20%;
+}
+#yerbas{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin: auto;
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+}
+.a-yerbas{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin: auto;
+}
+#mates{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    position: relative;
+    margin: auto;
+    top:50%;
+    transform: translateY(-50%);
+}
+.a-mates{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin: auto;
+}
+#bombillas{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    position: relative;
+    margin: auto;
+    top:50%;
+    transform: translateY(-50%);
+}
+.a-bombillas{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin: auto;
+}
+#combos{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    position: relative;
+    margin: auto;
+    top:50%;
+    transform: translateY(-50%);
+}
+.a-combos{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin: auto;
+}
+
+.redes ul{
+    grid-row: 3/4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    margin: 0 1rem 1rem 1rem;
+    height: 80%;
+}
+
+.redes i{
+    cursor: pointer;
+    font-size: 2rem;
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+    padding: 0 1rem;
+}
+a{color: whitesmoke; text-decoration: none;}
+.ig-i{grid-column: 1/2; text-align:right;}
+.fb-i{grid-column: 2/3; text-align:center;}
+.te-i{grid-column: 3/4; text-align:left;}
+
+
+main{
+    background-color: whitesmoke;
+    color: black;
+}
+
+.products{
+    display: grid;
+    grid-template-columns: .2fr 1fr .2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 2rem;
+}
+.yerbas{
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.mates{
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+.bombillas{ 
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+.combos{
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+.title{
+    text-align: center;
+    display: block;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.miniGallery{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    display: block;
+    box-shadow: 5px 5px 25px black;
+}
+
+h3{
+    padding: .5rem 0;
+    font-size: 2rem;
+    background-color: black;
+    color: whitesmoke;
+}
+
+.actions{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.actions button{
+    cursor: pointer;
+    padding: .7rem 1rem;
+    border-radius: 5px;
+    border: 2px transparent;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.actions button:hover{
+    background-color: hsla(0, 0%, 0%, 0.40);
+    transition: .3s;
+}
+
+.product-description{
+    padding: .2rem 0 .4rem 0;
+    color: whitesmoke;
+}
+
+footer{
+    text-align: center;
+    padding: 1rem 0;
+}
+.abajoizq{
+    display: none;
+}
+.btn-prod{
+    display: none;
+}
+.btn-prod button{
+    display: none;
+}
+}
+
+@media(min-width: 800px){
+    .cajaGrid{
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: .2fr 1fr .8fr .2fr .2fr;
+        grid-template-rows: .2fr 1fr .2fr;
+        row-gap: 1rem;
+        background-color: black;
+        color: whitesmoke;
+    }
+    nav{
+        grid-column: 2/3;
+        display: block;
+    }
+    nav h1{
+        font-size: 2rem;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    header{
+        grid-row: 2/3;
+        grid-column: 2/3;
+    }
+    .brand{
+        font-size: 2.5rem;
+        position: relative;
+        top:50%;
+        transform: translateY(-51%);
+        text-align: center;
+    }
+    .brand p{
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        margin-top: 1.5rem;
+        letter-spacing: .2rem;
+    }
+    .muestra-products{
+        display: none;
+    }
+    .redes{
+        grid-column: 4/5;
+        grid-row: 2/3;
+    }
+    .redes ul{
+        position: relative;
+        top: 50%;
+        transform: translateY(-68%);
+    }
+    .redes i{
+        font-size: 2rem;
+        color: whitesmoke;
+    }
+    .redes i:hover{
+        font-size: 2.5rem;
+        transition: .5s;
+    }
+    .redes li{
+        margin: 3rem 0;
+    }
+    .btn-prod{
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+    button{
+        cursor: pointer;
+        display: block;
+        font-size: 2.5rem;
+        background-color: transparent;
+        position: relative;
+        top:50%;
+        transform: translateY(-25%);
+        margin: auto;
+        border: transparent;
+    }
+    .btn-prod a{
+        border: 1px solid whitesmoke;
+        border-radius: 5px;
+        padding: .4rem 2rem;
+        color: whitesmoke;
+        font-size: 2rem;
+    }
+    .btn-prod a:hover{
+        color: black;
+        background-color: rgb(245, 245, 245);
+        color: black;
+        transition: all .5s;
+    }
+    .abajoizq{
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+    .abajoizq p{
+        position: relative;
+        top:50%;
+        transform: translateY(-50%);
+    }
+    .title{
+        text-align: center;
+        display: block;
+        padding: 4rem 0;
+        text-align: center;
+        font-size: 3rem;
+    }
+    main{
+        width: 80%;
+        margin: auto;
+    }
+    .products{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        column-gap: 3rem;
+        padding-bottom: 4rem;
+    }
+    .miniGallery{
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
+        background-color: black;
+        margin: 0;
+        display: block;
+        box-shadow: 5px 5px 25px black;
+        text-align: center;
+    }
+    h3{
+        padding: .5rem 0;
+        font-size: 2.2rem;
+        background-color: black;
+        color: whitesmoke;
+    }
+    .actions{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        background-color: white;
+    }
+    .actions button{
+        cursor: pointer;
+        padding: .7rem 1rem;
+        border-radius: 5px;
+        border: 2px transparent;
+        background-color: transparent;
+        font-weight: bold;
+    }
+    .actions button:hover{
+        background-color: hsla(0, 0%, 0%, 0.40);
+        transition: .3s;
+    }
+    .product-description{
+        font-size: 1.4rem;
+        padding: .2rem 0 .4rem 0;
+        color: whitesmoke;
+    }
+    footer{
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 1rem 0;
+        color: black;
+    }
+}
